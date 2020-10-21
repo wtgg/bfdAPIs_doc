@@ -180,6 +180,9 @@ Form Data示例:
 |links|  是  |string |当前帖子中包含的链接的url，可以为空|
 |hashtags|  是  |string |hashtags信息，可以为空|
 |other_info|  是  |string |其他爬到的字段，序列化的字典类型，可以为空|
+|site_name|  是  |string |源网站 `facebook`或者`twitter`|
+|at_name|  是  |string |帖子发布者的账号 @后面的字符串|
+|user_name|  是  |string |帖子发布者的昵称 @上面的字符串|
 
 
 
@@ -236,7 +239,9 @@ Form Data示例:
    "other_info": {
         "loveCount": "1,708大爱",
     },
-
+    "site_name": "facebook",
+    "at_name": "DonaldTrump",
+    "user_name": "Donald J. Trump",
 }
 ----------------------------------------示例2----------------------------------------
 {
@@ -282,6 +287,9 @@ Form Data示例:
     ]
     "hashtags":["#FarmerstoFamilies"],
    "other_info": null,
+    "site_name": "facebook",
+    "at_name": "IvankaTrump",
+    "user_name": "Ivanka Trump",
 
 }
 ```
