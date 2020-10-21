@@ -316,6 +316,7 @@ Form Data示例:
 |website|  是  |string|网站，facebook或twitter|
 |at_name|  是  |string |人物在网站的账号，@后面的字符串|
 |user_name|  是  |string |人物在网站的名字|
+|user_id|  是  |string或int  |账号在该网站的id|
 |created_atTS|  是  |string或int |账号注册日期时间戳|
 |description|  是  |string或int  |人物描述信息|
 |personal_home_page|  是  |string  |账号在网站的主页|
@@ -326,6 +327,7 @@ Form Data示例:
 |location|  是  |string  |位置信息|
 |media_count|  是  |string或int  |媒体数|
 |posts_count|  是  |string或int  |发帖数|
+
 
 
 
