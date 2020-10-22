@@ -259,11 +259,17 @@ Form Data示例:
     "like_count": "6346",  // 尽量精确
     "dislike_count": null,
     "imgs": [
-        "https://pbs.twimg.com/media/EaqZVswXsAEf0lg.jpg",
-        "https://pbs.twimg.com/media/EaqZV6bXsAUn8z_.jpg",
-        "https://pbs.twimg.com/media/EaqZWQsWAAAmMkc.jpg",
-        "https://pbs.twimg.com/media/EaqZXA9XgAAqB53.jpg"
+        "/group1/default/20201015/11/21/1/41_file",
+        "/group1/default/20201015/11/21/1/42_file",
+        "/group1/default/20201015/11/21/1/43_file",
+        "/group1/default/20201015/11/21/1/44_file"
     ],
+    "imgs_src": [
+            "https://pbs.twimg.com/media/EaqZVswXsAEf0lg.jpg",
+            "https://pbs.twimg.com/media/EaqZV6bXsAUn8z_.jpg",
+            "https://pbs.twimg.com/media/EaqZWQsWAAAmMkc.jpg",
+            "https://pbs.twimg.com/media/EaqZXA9XgAAqB53.jpg"
+        ],
     "video_url": null,
     "links": null,
     "comments_count": "1511",
@@ -346,7 +352,8 @@ Form Data示例:
     "created_atTS": 1386391992,
     "description": "商家位置725 Fifth Ave纽约查询路线其他联系方式http://www.donaldjtrump.com简介This is the official Facebook page for Donald J. Trump性别男categories政治候选人 · 政界人士商家故事45th President of the United StatesDonald J. Trump has always dreamed big and pushed the boundaries of what is possible. He’s devoted his life to building business, jobs and achieving the American Dream – now, that is what he is doing for our country.In June 2015, Donald Trump announced his candidacy for President of the United States and started a movement unlike anything before. T... ",
     "personal_home_page": "https://www.facebook.com/donaldtrump",
-    "avatar_url": "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-0/p526x296/92133248_2596276283995246_6699196800395378688_o.jpg?_nc_cat=1&_nc_sid=8024bb&_nc_ohc=iX5oFfYLpfIAX8t8mA0&_nc_ht=scontent-hkg3-1",
+    "avatar_url": "/group1/default/20200604/04/33/1/71_file"  // fdfs地址,
+    "avatar_src": "https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-0/p526x296/92133248_2596276283995246_6699196800395378688_o.jpg?_nc_cat=1&_nc_sid=8024bb&_nc_ohc=iX5oFfYLpfIAX8t8mA0&_nc_ht=scontent-hkg3-1"  // 图片的原始地址,
     "is_transmitted": 0,
     "like_count": "1.5万赞",  // 尽量精确
     "birthday": "1948-06-06",
