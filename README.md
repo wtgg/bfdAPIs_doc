@@ -177,6 +177,7 @@ Form Data示例:
 |like_count|  是  |string或int |当前帖子的点赞次数|
 |dislike_count|  是  |string或int |当前帖子的点踩次数|
 |imgs|  是  |string |当前帖子中包含的图片的url,列表，可以为空|
+|imgs_src|  是  |string |当前帖子中包含的图片的原始src,列表，可以为空|
 |video_url|  是  |string |当前帖子中包含的视频的url，可以为空|
 |links|  是  |string |当前帖子中包含的链接的url，可以为空|
 |hashtags|  是  |string |hashtags信息，可以为空|
@@ -328,6 +329,7 @@ Form Data示例:
 |description|  是  |string或int  |人物描述信息|
 |personal_home_page|  是  |string  |账号在网站的主页|
 |avatar_url|  是  |string|人物头像|
+|avatar_src|  是  |string|人物头像图片的原始src|
 |birthday|  是  |string|生日|
 |followers_count|  是  |string或int  |粉丝数|
 |friends_count|  是  |string或int  |好友数|
