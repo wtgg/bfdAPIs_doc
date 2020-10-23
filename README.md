@@ -3,10 +3,14 @@
 
 ## 目录
 ### 1. [新增账号的验证](#新增账号的验证)
-### 2. [新增社交网络爬虫任务](#新增社交网络爬虫任务)
+### 2. [~~新增社交网络爬虫任务~~](#新增社交网络爬虫任务)
+### 2. [新增社交网络爬虫任务](https://github.com/wtgg/bfdAPIs_doc/blob/master/新增采集任务.md)
 ### 3. [更新爬虫任务执行数据](#更新爬虫任务执行数据)
 ### 4. [新增社交网络帖子](#新增社交网络帖子)
 ### 5. [新增社交网络人物信息](#新增社交网络人物信息)
+### 6. [社交网络人物账号详情](#社交网络人物账号详情)
+### 7. [社交网络帖子详情](#社交网络帖子详情)
+### 8. [任务执行详情](#任务执行详情)
 
 ---
 ### 新增账号的验证
@@ -373,5 +377,206 @@ Form Data示例:
     "posts_count": 5646545
 
 }
+```
+### [返回目录](#目录)
+
+
+### 社交网络人物账号详情
+> 百分点请求电科
+`/api/sna/detail/<sna_id>`
+
+**请求方式：**
+- GET
+
+**Header：**
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|token |  是  |    string   |    用来作请求验证  |
+
+**参数：** 
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|sna_id|  是  |string或int |社交网络账号表的id,url参数|
+
+
+
+
+
+
+返回结果示例:
+```json
+{
+    "sna_id": 1,
+    "spider_time": "2019-10-12 16:04:17",
+    "website": "twitter",
+    "at_name": "realDonaldTrump",
+    "user_name": "Donald J. Trump",
+    "remark_name": "美国总统",
+    "created_at": "2009-03-18 21:46:38",
+    "description": "45th President of the United States of America??",
+    "user_id": "VXNlcjoyNTA3Mzg3Nw==",
+    "personal_home_page": "https://twitter.com/realdonaldtrump",
+    "fast_followers_count": 2245,
+    "favourites_count": 7,
+    "followers_count": 65600254,
+    "friends_count": 47,
+    "location": "Washington, DC",
+    "media_count": 3455,
+    "posts_count": 45126,
+    "avatar_url": "https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg",
+    "birthday": null
+}
+
+```
+### [返回目录](#目录)
+
+
+### 社交网络帖子详情
+> 百分点请求电科
+`/api/snp/detail/<snp_id>`
+
+**请求方式：**
+- GET
+
+**Header：**
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|token |  是  |    string   |    用来作请求验证  |
+
+**参数：** 
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|snp_id|  是  |string或int |社交网络帖子表的id,url参数|
+
+
+
+
+
+
+返回结果示例:
+```json
+{
+    "snp_id": 300,
+    "sna_id": 5,
+    "spider_time": "2020-07-31 11:22:48",
+    "post_id": "10165181176165725",
+    "post_url": "https://www.facebook.com/DonaldTrump/photos/a.10156483516640725/10165181176165725",
+    "post_datetime": "2020-07-31 06:35:22",
+    "post_content": "As the Wall goes up, illegal crossings go down. This past week we built over 10 miles of Wall at our Southern Border. We now have 256 miles of NEW Wall and we are on track to have 300 miles completed by the end of August!",
+    "post_content_translated": "随着隔离墙的上升, 非法越野越野越野. 过去的一周, 我们在我们的南部边界建了10英里的墙. 我们现在有了256英里的新墙, 我们走上了8月底完成300英里的轨道!  · ",
+    "language": "英语",
+    "comments_count": "9027",
+    "share_count": "7389",
+    "is_transmitted": null,
+    "like_count": "10万赞",
+    "site_name": "facebook",
+    "imgs": [
+        {
+            "img_alt": "图片中可能有：天空、云、户外和大自然",
+            "img_src": "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-0/p235x350/115772180_10165181176170725_133670527837873105_o.jpg?_nc_cat=1&_nc_sid=110474&_nc_ohc=mz6NRrx82uwAX-3D26U&_nc_ht=scontent-hkt1-1.xx&_nc_tp=6&oh=83b25494bf87acd6a6ae3e45e441a4d7&oe=5F4B0279"
+        }
+    ],
+    "video_url": null,
+    "links": "https://xxxx",
+    "comments": [
+        {
+            "at_name": "joanirayl",
+            "user_name": "Joani Rayl",
+            "user_id": "752333961",
+            "comment_id": "192540585618340",
+            "comment_datetime": "2020-07-31 06:57:23",
+            "comment_text": "Thank you! This is a vital step in reducing human trafficking into our country. Well done to the workers (I am impressed)!"
+        },
+        {
+            "at_name": "yvette.connelly",
+            "user_name": "Yvette Connelly",
+            "user_id": "1031919893",
+            "comment_id": "2372609649550624",
+            "comment_datetime": "2020-07-31 07:31:01",
+            "comment_text": "So thankful for you President Trump.  We see what the Dems have put you through since day #1.   Thankfully you’re a strong man who lives by his convictions of what’s right and wrong. You’re doing for our country what many former presidents failed to do. May God bless you and your family."
+        },
+        ...
+    ]
+}
+
+```
+### [返回目录](#目录)
+
+
+### 任务执行详情
+> 百分点请求电科
+`/api/snp/detail/<snp_id>`
+
+**请求方式：**
+- GET
+
+**Header：**
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|token |  是  |    string   |    用来作请求验证  |
+
+**参数：** 
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|je_id|  是  |string或int |执行表的id,url参数|
+
+
+返回结果示例:
+```json
+{
+    "project_id": 1,
+    "job_execution_id": 666,
+    "job_instance_id": 93,
+    "spider_name": "facebook",
+    "keywords": "{\"at_name\": \"DonaldTrump\", \"remark_name\": \"特朗普\"}",
+    "service_job_execution_id": "73f6bf4cd82011e9bf5b00163e00cc7b",
+    "date_created": "2019-09-16 00:00:00",
+    "start_time": "2019-09-16 00:00:00",
+    "end_time": "2019-09-16 09:23:00",
+    "running_status": 2,
+    "running_on": "http://172.31.49.57:6800",
+    "user_name": "admin",
+    "spider_rows_count": 0,
+    "job_instance": {
+        "id": 93,
+        "date_created": "2019-09-16",
+        "job_instance_id": 93,
+        "user_name": "admin",
+        "job_name": "Trump",
+        "data_type": "社交网络数据",
+        "spider_type": "社交网络采集",
+        "keywords": "[{\"at_name\":\"DonaldTrump\",\"remark_name\":\"特朗普\"}]",
+        "project_id": 1,
+        "spider_names": "facebook",
+        "start_date": "1999-01-01",
+        "end_date": "2222-02-02",
+        "how_often": "每天采集",
+        "sleep_days": null,
+        "frequency": 1,
+        "excute_hours": "[\"04:00\"]",
+        "resolution": "1080p",
+        "else_prefer": "最高分辨率",
+        "video_all_info": "[\"1-40\"]",
+        "info_except_video": "[]",
+        "upload_time_type": "任务运行周期内最新",
+        "upload_time_start_date": "2019-09-15",
+        "upload_time_end_date": "2222-02-02",
+        "run_type": "长期",
+        "spider_arguments": "daemon=http://172.31.49.57:6800",
+        "enabled": -1,
+        "user_id": 1,
+        "pri": "紧急",
+        "is_deleted": 0,
+        "priority": 0,
+        "tags": null
+    }
+}
+
 ```
 ### [返回目录](#目录)
