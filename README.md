@@ -11,6 +11,7 @@
 ### 6. [社交网络人物账号详情](#社交网络人物账号详情)
 ### 7. [社交网络帖子详情](#社交网络帖子详情)
 ### 8. [任务执行详情](#任务执行详情)
+### 9. [新增社交网络帖子的评论](#新增社交网络帖子的评论)
 
 ---
 ### 新增账号的验证
@@ -579,4 +580,51 @@ Form Data示例:
 }
 
 ```
+### [返回目录](#目录)
+
+
+### 新增社交网络帖子的评论
+> 百分点请求电科
+
+`/api/snpc/add`
+
+**请求方式：**
+- POST
+
+**Header：**
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|token |  是  |    string   |    用来作请求验证  |
+
+**参数：** 
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|spider_timeTS|  是  |string或int |采集时间戳，精确到秒|
+|site_name|  是  |string |来源网站,`twitter` 或者`facebook`|
+|post_id|  是  |string或int |帖子在来源网站的id|
+|at_name|  是  |string |评论者@账号名称|
+|user_name|  是  |string |评论者昵称|
+|user_id|  是  |string |评论者在对应网站的id|
+|comment_id|  是  |string |评论id|
+|comment_timeTS|  是  |string或int |评论发布的时间戳，精确到秒|
+|text|  是  |string |评论内容|
+
+Form Data示例:
+```json
+
+{
+    "spider_timeTS":1603268305,
+    "site_name": "twitter",
+    "post_id": "1318823569988612096",
+    "at_name": "realDonaldTrump",
+    "user_name": "Donald J. Trump",
+    "user_id": "1339835893",
+    "comment_id": "1318823569988612096",
+    "comment_timeTS": 1603264305,
+    "text": "Why isn’t Biden corruption trending number one on Twitter? Biggest world story, and nowhere to be found. There is no”trend”, only negative stories that Twitter wants to put up. Disgraceful! Section 230",
+}
+```
+
 ### [返回目录](#目录)
