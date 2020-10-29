@@ -338,6 +338,7 @@ Form Data示例:
 |user_name|  是  |string |人物在网站的名字|
 |user_id|  是  |string或int  |账号在该网站的id|
 |created_atTS|  是  |string或int |账号注册日期时间戳|
+|regtime|  是  |string |账号注册日期|
 |description|  是  |string或int  |人物描述信息|
 |personal_home_page|  是  |string  |账号在网站的主页|
 |avatar_url|  是  |string|人物头像|
@@ -364,6 +365,7 @@ Form Data示例:
     "at_name": "DonaldTrump",  
     "user_name": "Donald J. Trump",
     "created_atTS": 1386391992,
+    "regtime": "2013年4月",
     "description": "商家位置725 Fifth Ave纽约查询路线其他联系方式http://www.donaldjtrump.com简介This is the official Facebook page for Donald J. Trump性别男categories政治候选人 · 政界人士商家故事45th President of the United StatesDonald J. Trump has always dreamed big and pushed the boundaries of what is possible. He’s devoted his life to building business, jobs and achieving the American Dream – now, that is what he is doing for our country.In June 2015, Donald Trump announced his candidacy for President of the United States and started a movement unlike anything before. T... ",
     "personal_home_page": "https://www.facebook.com/donaldtrump",
     "avatar_url": "/group1/default/20200604/04/33/1/71_file"  // fdfs地址,
