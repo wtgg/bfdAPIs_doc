@@ -197,6 +197,7 @@ Form Data示例:
 |site_name|  是  |string |源网站 `facebook`或者`twitter`|
 |at_name|  是  |string |帖子发布者的账号 @后面的字符串|
 |user_name|  是  |string |帖子发布者的昵称 @上面的字符串|
+|keywords|  是  |string |人物采集类型中用户自己设定的任务的备注(新增任务中的`crawlKeyWord['tag']`; 关键词采集任务中的`crawlKeyWord['keyWord']`)|
 
 
 
