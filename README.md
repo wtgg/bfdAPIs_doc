@@ -197,7 +197,6 @@ Form Data示例:
 |site_name|  是  |string |源网站 `facebook`或者`twitter`|
 |at_name|  是  |string |帖子发布者的账号 @后面的字符串|
 |user_name|  是  |string |帖子发布者的昵称 @上面的字符串|
-|keywords|  是  |string |人物采集类型中用户自己设定的任务的备注(新增任务中的`crawlKeyWord['tag']`; 关键词采集任务中的`crawlKeyWord['keyWord']`)|
 
 
 
@@ -260,7 +259,7 @@ Form Data示例:
 }
 ----------------------------------------示例2----------------------------------------
 {
-    "je_id": 1234,  // 爬虫任务id
+    "je_id": "dev_1234",  // 爬虫任务id
     "spider_timeTS": 1592384301,  // 采集时间戳
     "post_id": "10164386532535725",  // 帖子在网站的id
     "post_url": "https://twitter.com/IvankaTrump/status/1272998476171878400",  //帖子url
@@ -333,6 +332,7 @@ Form Data示例:
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
+|je_id|  是  |string | 爬虫任务的唯一标识 |
 |spider_timeTS|  是  |string或int |采集时间戳，精确到秒|
 |website|  是  |string|网站，facebook或twitter|
 |at_name|  是  |string |人物在网站的账号，@后面的字符串|
@@ -528,7 +528,7 @@ Form Data示例:
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
-|je_id|  是  |string或int |执行表的id,url参数|
+|je_id|  是  |string |执行表的id,url参数|
 
 
 返回结果示例:
@@ -604,6 +604,7 @@ Form Data示例:
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
+|je_id|  是  |string | 爬虫任务的唯一标识 |
 |spider_timeTS|  是  |string或int |采集时间戳，精确到秒|
 |site_name|  是  |string |来源网站,`twitter` 或者`facebook`|
 |post_id|  是  |string或int |帖子在来源网站的id|
