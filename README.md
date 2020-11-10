@@ -136,8 +136,7 @@ Form Data示例:
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
-|task_id|  是  |string或int |电科系统中的任务id|
-|je_id|  是  |string或int  |电科系统中的执行id|
+|je_id|  是  |string  |电科系统中的执行id|
 |running_status|  否  |int |此次(百分点系统中的)爬虫执行状态：0即将运行, 1正在运行，2已完成, 3被中止|
 |end_timeTS|  否 |string或int |此次(百分点系统中的)爬虫运行结束的时间戳，精确到秒|
 |finish_reason|  否 |string |此次(百分点系统中的)爬虫运行结束的原因，比如爬取到重复数据已超过3条，用户中止等等|
@@ -151,7 +150,7 @@ Form Data示例:
 {
     "status": "ok",
     "msg": "更新成功",
-    "je_id": 123401  // 电科系统中的执行id
+    "je_id": "dev_123"  // 电科系统中的执行id
 }
 ```
 ### [返回目录](#目录)
@@ -174,7 +173,7 @@ Form Data示例:
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
-|je_id|  是  |string或int |爬虫任务id|
+|je_id|  是  |string |爬虫任务id|
 |spider_timeTS|  是  |string或int |采集时间戳，精确到秒|
 |post_id|  是  |string或int |帖子在来源网站的id|
 |post_url|  是  |string |帖子在来源网站的url|
@@ -207,7 +206,7 @@ Form Data示例:
 
 ----------------------------------------示例1----------------------------------------
 {
-    "je_id": 1234,  // 爬虫任务id
+    "je_id": "pro_123",  // 爬虫任务id
     "spider_timeTS": 1586391992,  // 采集时间戳
     "post_id": "10164386532535725",  // 帖子在网站的id
     "post_url": "https://www.facebook.com/DonaldTrump/posts/10164386532535725",  //帖子url
@@ -227,25 +226,6 @@ Form Data示例:
     "video_url": null,
     "links": null,
     "comments_count": "1511",
-    "post_comments": [  // 评论，取最新的200条
-        {
-            "at_name": "nancy.miller.944",  // 评论者账号，@后面的字符串
-            "user_name": "Nancy Miller",  // 评论者账号，账号在网站的名字
-            "user_id": "100000667601679",  // 评论者账号在网站的id
-            "comment_id": "10164386821570725", // 该评论在网站的id
-            "comment_timeTS": 1586391992,  // 评论发布时间戳
-            "comment_text": "I have one suggestion about when it is time to start opening up the economy. One of the first businesses that should be opened up are dental offices. We take very many precautions against infections. We were masks, gloves and we wipe everything down between patients. Also every instrument is sterilized. We should be one business that could open first without worry."  // 评论的内容
-        },
-        {
-            "at_name": "dana.fountain.7",
-            "user_name": "Dana Fountain",
-            "user_id": "100000033535305",
-            "comment_id": "10164386754595725",
-            "comment_timeTS": 1586391992,
-            "comment_text": "Thank you Mr. President for your strength in leadership. Having a strong leader for our country will cause our country to be back up and running in no time!!! Thank you sir!! You are beyond doubt the greatest President in our history. I feel blessed to be living during your presidency. God Bless you and keep you ❤️"
-        }
-    .......
-    ]
     "hashtags": {
         "xx": "xxxx",
         "xxx": "xxxx"
@@ -286,25 +266,6 @@ Form Data示例:
     "video_url": null,
     "links": null,
     "comments_count": "1511",
-    "post_comments": [  // 评论，取最新的200条
-        {
-            "at_name": "nancy.miller.944",  // 评论者账号，@后面的字符串
-            "user_name": "Nancy Miller",  // 评论者账号，账号在网站的名字
-            "user_id": "100000667601679",  // 评论者账号在网站的id
-            "comment_id": "10164386821570725", // 该评论在网站的id
-            "comment_timeTS": 1586391992,  // 评论发布时间戳
-            "comment_text": "I have one suggestion about when it is time to start opening up the economy. One of the first businesses that should be opened up are dental offices. We take very many precautions against infections. We were masks, gloves and we wipe everything down between patients. Also every instrument is sterilized. We should be one business that could open first without worry."  // 评论的内容
-        },
-        {
-            "at_name": "dana.fountain.7",
-            "user_name": "Dana Fountain",
-            "user_id": "100000033535305",
-            "comment_id": "10164386754595725",
-            "comment_timeTS": 1586391992,
-            "comment_text": "Thank you Mr. President for your strength in leadership. Having a strong leader for our country will cause our country to be back up and running in no time!!! Thank you sir!! You are beyond doubt the greatest President in our history. I feel blessed to be living during your presidency. God Bless you and keep you ❤️"
-        }
-    .......
-    ]
     "hashtags":["#FarmerstoFamilies"],
    "other_info": null,
     "site_name": "facebook",
@@ -361,6 +322,7 @@ Form Data示例:
 
 ----------------------------------------示例1----------------------------------------
 {
+    "je_id": "dev_1234",  // 电科采集系统任务的唯一标识
     "spider_timeTS": 1586391992,  // 采集时间戳
     "website": "facebook",  // 或twitter
     "at_name": "DonaldTrump",  
@@ -379,7 +341,6 @@ Form Data示例:
     "location": "Washington D.C",
     "media_count": "1511",
     "posts_count": 5646545
-
 }
 ```
 ### [返回目录](#目录)
@@ -619,6 +580,7 @@ Form Data示例:
 ```json
 
 {
+    "je_id": "dev_123",  // 爬虫任务的唯一标识
     "spider_timeTS":1603268305,
     "site_name": "twitter",
     "post_id": "1318823569988612096",
