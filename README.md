@@ -136,7 +136,7 @@ Form Data示例:
 
 |参数名|必选|类型|说明|
 |:----    |:---|:----- |-----   |
-|je_id|  是  |string  |电科系统中的执行id|
+|je_id|  是  |string  |电科系统中的执行id,此参数直接放在在url中,例如`/api/job_excution/update/dev_123`|
 |running_status|  否  |int |此次(百分点系统中的)爬虫执行状态：0即将运行, 1正在运行，2已完成, 3被中止|
 |end_timeTS|  否 |string或int |此次(百分点系统中的)爬虫运行结束的时间戳，精确到秒|
 |finish_reason|  否 |string |此次(百分点系统中的)爬虫运行结束的原因，比如爬取到重复数据已超过3条，用户中止等等|
